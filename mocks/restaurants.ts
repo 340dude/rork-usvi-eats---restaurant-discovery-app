@@ -347,4 +347,136 @@ export const mockRestaurants: Restaurant[] = [
     lastUpdated: '2024-01-13T15:00:00Z',
     isOpen: false,
   },
+  {
+    id: '6',
+    name: 'Sun & Sea Bar and Grill',
+    slug: 'sun-sea-bar-grill',
+    description: 'Family-friendly waterfront restaurant at Point Pleasant Resort featuring locally sourced food, fresh locally caught fish, and local craft beers. Offers cook services for your fresh catch.',
+    island: 'St. Thomas',
+    cuisine: ['Caribbean', 'Seafood', 'Bar & Grill', 'American'],
+    priceLevel: '$',
+    rating: 4.6,
+    reviewCount: 124,
+    images: {
+      hero: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800',
+      gallery: [
+        'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800',
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800',
+      ],
+    },
+    location: {
+      address: 'Point Pleasant Resort, 6600 Estate Smith Bay, St. Thomas 00802',
+      coordinates: {
+        latitude: 18.3380,
+        longitude: -64.8690,
+      },
+      neighborhood: 'Smith Bay',
+    },
+    contact: {
+      phone: '(340) 775-7200',
+      website: 'https://sunnseavi.com',
+      instagram: '@sunnsea',
+    },
+    hours: {
+      monday: { open: '11:00', close: '21:00' },
+      tuesday: { open: '11:00', close: '21:00' },
+      wednesday: { open: '11:00', close: '21:00' },
+      thursday: { open: '11:00', close: '21:00' },
+      friday: { open: '11:00', close: '22:00' },
+      saturday: { open: '11:00', close: '22:00' },
+      sunday: { open: '11:00', close: '21:00' },
+    },
+    features: ['waterfront', 'family-friendly', 'live-music', 'outdoor-seating', 'parking', 'cook-your-catch'],
+    dietaryOptions: ['vegetarian', 'gluten-free'],
+    menu: [
+      {
+        id: 'appetizers',
+        name: 'Appetizers',
+        items: [
+          {
+            id: 'conch-fritters',
+            name: 'Conch Fritters',
+            description: 'Fresh local conch, lightly battered and fried',
+            price: '14',
+            popular: true,
+          },
+          {
+            id: 'fish-dip',
+            name: 'Smoked Fish Dip',
+            description: 'House-made with locally caught fish, served with plantain chips',
+            price: '12',
+          },
+        ],
+      },
+      {
+        id: 'fresh-catch',
+        name: 'Fresh Local Catch',
+        description: 'Daily selection of locally caught fish',
+        items: [
+          {
+            id: 'mahi-mahi',
+            name: 'Grilled Mahi Mahi',
+            description: 'Fresh local catch, grilled to perfection with island seasonings',
+            price: 'Market Price',
+            dietaryTags: ['gluten-free'],
+            popular: true,
+          },
+          {
+            id: 'red-snapper',
+            name: 'Pan-Seared Red Snapper',
+            description: 'Locally caught snapper with Caribbean spices',
+            price: 'Market Price',
+            dietaryTags: ['gluten-free'],
+          },
+          {
+            id: 'cook-your-catch',
+            name: 'Cook Your Catch',
+            description: 'Bring your fresh catch and we\'ll prepare it your way',
+            price: '15',
+            popular: true,
+          },
+        ],
+      },
+      {
+        id: 'entrees',
+        name: 'Entrées',
+        items: [
+          {
+            id: 'jerk-chicken',
+            name: 'Jerk Chicken',
+            description: 'Marinated in authentic Caribbean spices, grilled and served with rice and beans',
+            price: '22',
+            dietaryTags: ['gluten-free'],
+          },
+          {
+            id: 'bbq-ribs',
+            name: 'Caribbean BBQ Ribs',
+            description: 'Slow-cooked ribs with island BBQ sauce',
+            price: '26',
+          },
+        ],
+      },
+      {
+        id: 'beverages',
+        name: 'Beverages',
+        items: [
+          {
+            id: 'local-beer',
+            name: 'Local Craft Beer',
+            description: 'Selection of local craft beers on draft and in cans',
+            price: '6',
+          },
+          {
+            id: 'rum-punch',
+            name: 'Caribbean Rum Punch',
+            description: 'Made with local spirits and fresh fruit juices',
+            price: '10',
+            popular: true,
+          },
+        ],
+      },
+    ],
+    lastUpdated: '2024-01-18T12:00:00Z',
+    isOpen: true,
+  },
 ];
