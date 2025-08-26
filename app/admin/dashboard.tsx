@@ -20,6 +20,7 @@ import {
   Users,
   Phone,
   Navigation,
+  ArrowLeft,
 } from 'lucide-react-native';
 import { Stack, useRouter } from 'expo-router';
 import { RestaurantAnalytics } from '@/types/restaurant';
@@ -88,6 +89,14 @@ export default function AdminDashboard() {
           title: 'Restaurant Dashboard',
           headerStyle: { backgroundColor: '#00BCD4' },
           headerTintColor: '#fff',
+          headerLeft: () => (
+            <TouchableOpacity 
+              onPress={() => router.back()}
+              style={{ marginLeft: 16 }}
+            >
+              <ArrowLeft size={24} color="#fff" />
+            </TouchableOpacity>
+          ),
         }} 
       />
       <ScrollView style={styles.container}>
