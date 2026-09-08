@@ -1,0 +1,4 @@
+# Not needed in the app bundle — dev/admin tooling only.
+scripts/
+supabase/
+docs/

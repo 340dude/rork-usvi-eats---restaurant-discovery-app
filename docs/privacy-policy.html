@@ -1,0 +1,481 @@
+<title>VI Eats Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f6fafb;
+    --surface: #ffffff;
+    --surface-sunken: #eef5f6;
+    --text: #16232a;
+    --muted: #5b6e74;
+    --faint: #85969b;
+    --border: #dce7ea;
+    --accent: #0891a8;
+    --accent-soft: #e3f6f9;
+    --accent-soft-border: #bfe9f0;
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Charter, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1518;
+      --surface: #121c1f;
+      --surface-sunken: #0a1113;
+      --text: #e7eef0;
+      --muted: #93a6ab;
+      --faint: #647377;
+      --border: #253a3f;
+      --accent: #4dd8ec;
+      --accent-soft: #132a2e;
+      --accent-soft-border: #1f4249;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0d1518;
+    --surface: #121c1f;
+    --surface-sunken: #0a1113;
+    --text: #e7eef0;
+    --muted: #93a6ab;
+    --faint: #647377;
+    --border: #253a3f;
+    --accent: #4dd8ec;
+    --accent-soft: #132a2e;
+    --accent-soft-border: #1f4249;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 96px;
+  }
+
+  a { color: var(--accent); text-decoration-color: var(--accent-soft-border); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  header.top {
+    padding: 56px 0 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.01em;
+  }
+
+  .mark .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex: none;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    line-height: 1.15;
+    margin: 22px 0 10px;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: 0.86rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .meta strong { color: var(--text); font-weight: 600; }
+
+  .summary {
+    margin: 36px 0 8px;
+    padding: 22px 24px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-soft-border);
+    border-radius: 10px;
+  }
+
+  .summary .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .summary ul {
+    margin: 0;
+    padding-left: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .summary li { font-size: 0.96rem; }
+
+  nav.toc {
+    margin: 40px 0 8px;
+    padding: 20px 0 0;
+  }
+
+  nav.toc .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 12px;
+  }
+
+  nav.toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 24px;
+  }
+
+  nav.toc li { break-inside: avoid; margin-bottom: 8px; }
+
+  nav.toc a {
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  nav.toc a:hover { color: var(--accent); }
+
+  main { margin-top: 12px; }
+
+  section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  .section-num {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 24px 0 8px;
+    color: var(--text);
+  }
+
+  p { margin: 0 0 14px; max-width: 62ch; color: var(--text); }
+  section .lede { color: var(--muted); }
+
+  ul.plain, ol.plain { margin: 0 0 14px; padding-left: 1.2em; max-width: 62ch; }
+  ul.plain li, ol.plain li { margin-bottom: 8px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card-title .chip {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+
+  .card.dont .card-title .chip {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent-soft-border);
+  }
+
+  .card.dont ul { margin: 0; padding-left: 1.1em; }
+  .card.dont li { margin-bottom: 6px; font-size: 0.93rem; }
+
+  table.datamap {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 0.88rem;
+  }
+
+  table.datamap th {
+    text-align: left;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faint);
+    font-weight: 700;
+    padding: 0 12px 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  table.datamap td {
+    padding: 12px 12px 12px 0;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text);
+  }
+
+  table.datamap tr:last-child td { border-bottom: none; }
+  table.datamap td.muted { color: var(--muted); }
+
+  .tablewrap { overflow-x: auto; }
+
+  footer.contact {
+    margin-top: 12px;
+    padding: 40px 0 0;
+  }
+
+  .contact-card {
+    background: var(--surface-sunken);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 26px;
+    text-align: center;
+  }
+
+  .contact-card h2 { margin-bottom: 8px; }
+  .contact-card p { margin: 0 auto 16px; color: var(--muted); }
+
+  .email-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.94rem;
+    padding: 11px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .email-btn:hover { opacity: 0.92; }
+
+  .fineprint {
+    margin-top: 28px;
+    font-size: 0.8rem;
+    color: var(--faint);
+    text-align: center;
+  }
+
+  @media (max-width: 520px) {
+    nav.toc ol { columns: 1; }
+    header.top { padding-top: 40px; }
+  }
+</style>
+
+<div class="page">
+  <header class="top">
+    <span class="mark"><span class="dot"></span>VI Eats</span>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span><strong>Effective:</strong> August 14, 2026</span>
+      <span><strong>Applies to:</strong> the VI Eats mobile app and website</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div class="eyebrow">In short</div>
+    <ul>
+      <li>We use your location on your device, in the moment, to sort restaurants by distance — we never store or send it to our servers.</li>
+      <li>Your favorites are saved only on your device.</li>
+      <li>We don't run ads, sell data, or use third-party tracking SDKs.</li>
+      <li>Restaurant owners create an account (email + password) to manage their own listing only.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="eyebrow">Contents</div>
+    <ol>
+      <li><a href="#collect">1. Information we collect</a></li>
+      <li><a href="#use">2. How we use it</a></li>
+      <li><a href="#location">3. Location data</a></li>
+      <li><a href="#sharing">4. Sharing &amp; third parties</a></li>
+      <li><a href="#retention">5. Retention &amp; deletion</a></li>
+      <li><a href="#children">6. Children's privacy</a></li>
+      <li><a href="#security">7. Security</a></li>
+      <li><a href="#rights">8. Your rights &amp; choices</a></li>
+      <li><a href="#changes">9. Changes to this policy</a></li>
+      <li><a href="#contact">10. Contact us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="collect">
+      <div class="section-num">01</div>
+      <h2>Information we collect</h2>
+      <p class="lede">VI Eats is built so that browsing restaurants doesn't require an account. Here's exactly what we collect, and from whom.</p>
+
+      <div class="tablewrap">
+        <table class="datamap">
+          <thead>
+            <tr><th>Data</th><th>From</th><th>Required?</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Device location</td>
+              <td class="muted">Anyone browsing restaurants</td>
+              <td class="muted">No — you can deny it</td>
+            </tr>
+            <tr>
+              <td>Favorited restaurants</td>
+              <td class="muted">Anyone using Favorites</td>
+              <td class="muted">Stored on-device only</td>
+            </tr>
+            <tr>
+              <td>Anonymous view/call/directions taps</td>
+              <td class="muted">Anyone viewing a restaurant page</td>
+              <td class="muted">Not tied to you personally</td>
+            </tr>
+            <tr>
+              <td>Report description &amp; optional photo</td>
+              <td class="muted">Anyone submitting a correction</td>
+              <td class="muted">No personal info required</td>
+            </tr>
+            <tr>
+              <td>Email &amp; password</td>
+              <td class="muted">Restaurant owners only</td>
+              <td class="muted">Required to manage a listing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>We do not require you to create an account, provide your name, or give us your email just to browse, search, or favorite restaurants.</p>
+    </section>
+
+    <section id="use">
+      <div class="section-num">02</div>
+      <h2>How we use it</h2>
+      <ul class="plain">
+        <li>To show restaurants near you and sort them by distance.</li>
+        <li>To let restaurant owners sign in and manage their own profile, menu, hours, and photos.</li>
+        <li>To give restaurant owners basic, aggregated engagement numbers for their own listing (e.g. how many people viewed their page this week).</li>
+        <li>To review and act on accuracy reports submitted about a restaurant.</li>
+      </ul>
+    </section>
+
+    <section id="location">
+      <div class="section-num">03</div>
+      <h2>Location data</h2>
+      <p>When you allow location access, VI Eats reads your device's current position to calculate how far each restaurant is and sort your results accordingly. That's the only thing it's used for.</p>
+      <div class="card dont">
+        <div class="card-title"><span class="chip">What we don't do</span></div>
+        <ul>
+          <li>We never track your location in the background — only while the app is open and you're actively browsing.</li>
+          <li>We never store your location or send it to our servers. It stays on your device.</li>
+          <li>We never use your location for advertising.</li>
+        </ul>
+      </div>
+      <p>You can deny location access, or turn it off later in your device settings, and still use every other part of the app — you'll just see restaurants unsorted by distance.</p>
+    </section>
+
+    <section id="sharing">
+      <div class="section-num">04</div>
+      <h2>Sharing &amp; third parties</h2>
+      <p>We don't sell your information, and we don't run ads or use third-party advertising or tracking SDKs anywhere in VI Eats.</p>
+      <p>We do rely on a small number of service providers to operate the app:</p>
+      <ul class="plain">
+        <li><strong>Supabase</strong> — hosts our database and handles restaurant-owner sign-in. Data submitted through the app (favorites are the exception — see below) passes through Supabase's infrastructure to reach us.</li>
+        <li><strong>Unsplash</strong> — some restaurant photos are sourced from Unsplash's stock photo library. This doesn't involve any of your personal data.</li>
+      </ul>
+      <p>We may disclose information if required by law, or to protect the rights, safety, or property of VI Eats, our users, or the public.</p>
+    </section>
+
+    <section id="retention">
+      <div class="section-num">05</div>
+      <h2>Retention &amp; deletion</h2>
+      <ul class="plain">
+        <li><strong>Favorites</strong> live only on your device. Clearing the app's data or uninstalling it removes them completely — we never see them.</li>
+        <li><strong>Restaurant owner accounts</strong> are kept while the account is active. Email us to request deletion.</li>
+        <li><strong>Accuracy reports</strong> are kept as part of a restaurant's record so we can track and resolve issues over time.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <div class="section-num">06</div>
+      <h2>Children's privacy</h2>
+      <p>VI Eats is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we'll remove it.</p>
+    </section>
+
+    <section id="security">
+      <div class="section-num">07</div>
+      <h2>Security</h2>
+      <p>Data sent between your device and our servers is encrypted in transit. Restaurant owner accounts are protected by access rules that restrict each owner to editing only their own restaurant's information — no owner can see or change another restaurant's data or reports.</p>
+    </section>
+
+    <section id="rights">
+      <div class="section-num">08</div>
+      <h2>Your rights &amp; choices</h2>
+      <ul class="plain">
+        <li>Deny or revoke location access anytime in your device's privacy settings.</li>
+        <li>Clear your favorites by clearing the app's local data.</li>
+        <li>Ask us what data we hold about your restaurant-owner account, correct it, or request deletion, by emailing us.</li>
+      </ul>
+      <p>Depending on where you live, local law may give you additional rights over your information. Contact us and we'll do our best to help.</p>
+    </section>
+
+    <section id="changes">
+      <div class="section-num">09</div>
+      <h2>Changes to this policy</h2>
+      <p>If we make material changes to this policy, we'll update the effective date above. Continuing to use VI Eats after a change means you accept the updated policy.</p>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div class="section-num">10</div>
+    <div class="contact-card">
+      <h2>Contact us</h2>
+      <p>Questions about this policy, or about your data? We're happy to help.</p>
+      <a class="email-btn" href="mailto:vlvtclothingbrand@gmail.com">vlvtclothingbrand@gmail.com</a>
+    </div>
+    <p class="fineprint">VI Eats — Restaurant discovery across the U.S. Virgin Islands</p>
+  </footer>
+</div>
