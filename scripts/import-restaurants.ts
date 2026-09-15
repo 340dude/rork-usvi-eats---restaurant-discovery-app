@@ -85,7 +85,6 @@ interface RestaurantRowData {
   hours: Record<string, { open?: string; close?: string; closed?: boolean }>;
   features: string[];
   dietary_options: string[];
-  menu: never[];
   is_open: boolean;
 }
 
@@ -166,7 +165,6 @@ function buildRestaurantRow(row: Row, rowNum: number, seenSlugs: Set<string>): B
       hours,
       features,
       dietary_options: dietaryOptions,
-      menu: [],
       is_open: true,
     },
   };
