@@ -291,7 +291,11 @@ export default function EditMenu() {
                             </View>
                           )}
                         </View>
-                        <Text style={styles.itemPrice}>${item.price}</Text>
+                        <Text style={styles.itemPrice}>
+                          {typeof item.price === 'string' && /^\$|market price|ask your server/i.test(item.price)
+                            ? item.price
+                            : `$${item.price}`}
+                        </Text>
                       </View>
                       {item.description && (
                         <Text style={styles.itemDescription}>{item.description}</Text>

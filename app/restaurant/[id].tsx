@@ -284,7 +284,9 @@ export default function RestaurantDetailScreen() {
                     {item.popular && <Text style={styles.popularBadge}> ⭐ Popular</Text>}
                   </Text>
                   <Text style={styles.menuItemPrice}>
-                    {item.price === 'Market Price' ? item.price : `$${item.price}`}
+                    {typeof item.price === 'string' && /^\$|market price|ask your server/i.test(item.price)
+                      ? item.price
+                      : `$${item.price}`}
                   </Text>
                 </View>
                 {item.description && (
